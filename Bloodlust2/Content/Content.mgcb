@@ -31,18 +31,6 @@
 /processorParam:TextureFormat=Color
 /build:debug.png
 
-#begin maria.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:maria.png
-
 #begin Tile32.png
 /importer:TextureImporter
 /processor:TextureProcessor

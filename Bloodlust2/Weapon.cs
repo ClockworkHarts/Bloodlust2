@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Bloodlust2
 {
-    class Weapon
+    public class Weapon
     {
         //NOTE to set the size of the weapons bounds, sprite.scale needs to be used
 
@@ -23,6 +23,17 @@ namespace Bloodlust2
         {
             get { return sprite.position; }
             set { sprite.position = value; }
+        }
+
+
+        //once a good size for the different weapon types is determined
+        //this set function needs to be changed to a switch function
+        //that loads a scale based on the weapon's type
+        //as all of them will be the same 
+        public Vector2 Scale
+        {
+            get { return sprite.scale; }
+            set { sprite.scale = value; }
         }
 
         //Ints
@@ -44,30 +55,41 @@ namespace Bloodlust2
         
         public void Load(ContentManager Content)
         {
-            AnimatedTexture animation = new AnimatedTexture(Vector2.Zero, 0f, new Vector2(1, 1), 0f);
+            AnimatedTexture animation = new AnimatedTexture(Vector2.Zero, 0f, Scale, 0f);
             switch (type)
             {
                 case WeaponType.Dagger:
-                    animation.Load(Content, "ADDTEXTURE", 1, 0);
+                    animation.Load(Content, "Tile16", 1, 0);
+                    sprite.colour = Color.Cyan;
                     break;
 
                 case WeaponType.Sword:
-                    animation.Load(Content, "ADDTEXTURE", 1, 0);
+                    animation.Load(Content, "Tile16", 1, 0);
+                    sprite.colour = Color.DarkViolet;
                     break;
 
                 case WeaponType.Spear:
-                    animation.Load(Content, "ADDTEXTURE", 1, 0);
+                    animation.Load(Content, "Tile16", 1, 0);
+                    sprite.colour = Color.DeepPink;
+                    break;
+
+                case WeaponType.Unarmed:
+                    animation.Load(Content, "Tile16", 1, 0);
+                    sprite.colour = Color.Transparent;
                     break;
             }
             sprite.Add(animation, 0, 0);
-            sprite.colour = Color.White;
-            sprite.scale = new Vector2(1, 1);
 
         }
 
-        public void Draw()
+        public void Update(float deltaTime)
         {
 
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            sprite.Draw(spriteBatch);
         }
         
        

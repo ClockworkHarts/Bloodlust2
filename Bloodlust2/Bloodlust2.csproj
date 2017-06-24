@@ -39,7 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AnimatedTexture.cs" />
-    <Compile Include="BoundingBox.cs" />
+    <Compile Include="HitBox.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameOverState.cs" />

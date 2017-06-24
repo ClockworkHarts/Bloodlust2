@@ -36,7 +36,24 @@ namespace Bloodlust2
         //NPCs
         //NPC class is a group of enemies with the same home location
         //Batches list is a list of NPCS, or a list of groups of enemies
-        List<NPC> Batches = new List<NPC>();     
+        List<NPC> Batches = new List<NPC>();
+
+        //Weapons
+        List<Weapon> Weapons = new List<Weapon>();
+                //Dagger
+                public Vector2 daggerScale = new Vector2(0.5f, 1);
+                public float daggerAttackSpeed = 5f;
+                public float daggerDamage = 15f; 
+
+                //Sword
+                public Vector2 swordScale = new Vector2(1.1f, 1.5f);
+                public float swordAttackSpeed = 13f;
+                public float swordDamage = 30f;
+
+                //Spear
+                public Vector2 spearScale = new Vector2(1f, 2.5f);
+                public float spearAttackSpeed = 20f;
+                public float spearDamage = 50f;
        
         //public gamewide variables
         public static float tile = 64;
@@ -48,7 +65,9 @@ namespace Bloodlust2
         
 
         //debugging stuff
-        Texture2D debugMap;
+        
+
+
         private void LoadNPCs(int numberOfNPCs, int RectX, int RectY, int RectWidth, int RectHeight, Color colour)
         {
             NPC Batch = new NPC();
@@ -57,6 +76,17 @@ namespace Bloodlust2
             Batch.colour = colour;
             Batches.Add(Batch);
 
+        }
+
+        private void LoadWeapon(WeaponType type, Vector2 Position, Vector2 Scale, float attackSpeed, float damage)
+        {
+            Weapon Weapon = new Weapon();
+            Weapon.type = type;
+            Weapon.Position = Position;
+            Weapon.Scale = Scale;
+            Weapon.attackSpeed = attackSpeed;
+            Weapon.damage = damage;
+            Weapons.Add(Weapon);
         }
 
         private void Load(ContentManager Content, GameTime gameTime)
@@ -75,7 +105,7 @@ namespace Bloodlust2
             player.maxHealth = 100;
 
             //NPCs
-            LoadNPCs(5, 10, 10, 300, 300, Color.Blue);
+            LoadNPCs(5, 1000, 1000, 300, 300, Color.Blue);
             LoadNPCs(3, 400, 400, 300, 300, Color.Green);
 
             foreach (NPC B in Batches)
@@ -83,11 +113,21 @@ namespace Bloodlust2
                 B.Load(Content);
             }
 
+            //weapons
+            LoadWeapon(WeaponType.Dagger, new Vector2(700, 700), daggerScale, daggerAttackSpeed, daggerDamage);
+            LoadWeapon(WeaponType.Spear, new Vector2(500, 500), spearScale, spearAttackSpeed, spearDamage);
+            LoadWeapon(WeaponType.Sword, new Vector2(1000, 1000), swordScale, swordAttackSpeed, swordDamage);
+
+            foreach (Weapon W in Weapons)
+            {
+                W.Load(Content);
+            }
+
             //map
             map.Load(Content);
 
             //debugging
-            debugMap = Content.Load<Texture2D>("maria");
+            
         }
 
 
@@ -113,11 +153,25 @@ namespace Bloodlust2
             }
         }
 
-       
+        private void UpdatePlayerWeaponCollisions(float deltaTime)
+        {
+            foreach (Weapon W in Weapons)
+            {
+                if (IsCollidingRectangle(W.Bounds, player.Bounds) == true)
+                {
+                    player.equipType = W.type;
+                    Weapons.Remove(W);
+                    break;
+                }
+            }
+        }
+
+
 
         private void UpdateCollisions(float deltaTime)
         {
             UpdatePlayerNPCCollisions(deltaTime);
+            UpdatePlayerWeaponCollisions(deltaTime);
         }
         
 
@@ -132,10 +186,16 @@ namespace Bloodlust2
                 Load(Content, gameTime);
             }
 
-            player.Update(deltaTime);
+            player.Update(deltaTime, Content);
+
             foreach(NPC B in Batches)
             {
                 B.Update(deltaTime);
+            }
+
+            foreach(Weapon W in Weapons)
+            {
+                W.Update(deltaTime);
             }
 
             UpdateCollisions(deltaTime);
@@ -150,6 +210,7 @@ namespace Bloodlust2
 
         }
 
+
         public override void Draw(SpriteBatch spriteBatch)
         {
 
@@ -157,7 +218,7 @@ namespace Bloodlust2
             
             spriteBatch.Begin(transformMatrix : t);
             //spriteBatch.DrawString(font, "Game State", new Vector2(200, 200), Color.White);
-            spriteBatch.Draw(debugMap, new Vector2(0, 0), Color.White);
+            
 
             map.Draw(spriteBatch);
 
@@ -166,6 +227,11 @@ namespace Bloodlust2
             foreach(NPC B in Batches)
             {
                 B.Draw(spriteBatch);
+            }
+
+            foreach(Weapon W in Weapons)
+            {
+                W.Draw(spriteBatch);
             }
 
 
@@ -177,6 +243,9 @@ namespace Bloodlust2
             //player health bar
             spriteBatch.Draw(generic16, new Vector2(50, 50), null, null, Vector2.Zero, 0f, new Vector2((int)(player.maxHealth / 10), 1), Color.Black, SpriteEffects.None, 0f);
             spriteBatch.Draw(generic16, new Vector2(50, 50), null, null, Vector2.Zero, 0f, new Vector2((int)(player.health / 10), 1), Color.Red, SpriteEffects.None, 0f);
+
+            //debugging
+            spriteBatch.DrawString(font, player.equipType.ToString(), new Vector2(10, 10), Color.Black);
                     
             spriteBatch.End();
         }

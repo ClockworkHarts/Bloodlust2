@@ -7,8 +7,7 @@ using MonoGame.Extended.ViewportAdapters;
 public enum EnemyState { Idle, Patrol, Action, Asleep }
 public enum TileType { Dirt, Stone, Water };
 public enum TreeType { Pine, Oak, Spruce, Cedar };
-public enum PlayerWeapon { Unarmed, Dagger, Sword, Spear };
-public enum WeaponType { Dagger, Sword, Spear };
+public enum WeaponType { Unarmed, Dagger, Sword, Spear };
 
 namespace Bloodlust2
 {

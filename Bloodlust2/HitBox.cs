@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework;
 
 namespace Bloodlust2
 {
-    class BoundingBox
+    class HitBox
     {
 
     }
