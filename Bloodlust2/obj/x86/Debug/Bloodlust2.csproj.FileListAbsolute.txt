@@ -1,0 +1,102 @@
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\obj\x86\Debug\Bloodlust2.csprojResolveAssemblyReference.cache
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Bloodlust2.exe
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Bloodlust2.pdb
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\MonoGame.Extended.dll
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\MonoGame.Framework.dll
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Newtonsoft.Json.dll
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.dll
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.XInput.dll
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\MonoGame.Framework.xml
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Newtonsoft.Json.xml
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.xml
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.XInput.xml
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\obj\x86\Debug\Bloodlust2.exe
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\obj\x86\Debug\Bloodlust2.pdb
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Content\Arial.xnb
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Content\debug.xnb
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Content\maria.xnb
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Content\Tile32.xnb
+c:\users\skasi\documents\visual studio 2015\Projects\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Content\Tile64.xnb
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\obj\x86\Debug\Bloodlust2.exe
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\obj\x86\Debug\Bloodlust2.pdb
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Content\Arial.xnb
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Content\debug.xnb
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Content\maria.xnb
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Content\Tile32.xnb
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Content\Tile64.xnb
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Bloodlust2.exe
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Bloodlust2.pdb
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\MonoGame.Extended.dll
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\MonoGame.Framework.dll
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Newtonsoft.Json.dll
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.dll
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.XInput.dll
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\MonoGame.Framework.xml
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Newtonsoft.Json.xml
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.xml
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.XInput.xml
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+D:\AIE BACKUP\Bloodlust2\Bloodlust2\obj\x86\Debug\Bloodlust2.csprojResolveAssemblyReference.cache
+L:\Bloodlust\Bloodlust2\obj\x86\Debug\Bloodlust2.exe
+L:\Bloodlust\Bloodlust2\obj\x86\Debug\Bloodlust2.pdb
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\Content\Arial.xnb
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\Content\debug.xnb
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\Content\maria.xnb
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\Content\Tile32.xnb
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\Content\Tile64.xnb
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\Bloodlust2.exe
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\Bloodlust2.pdb
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\MonoGame.Extended.dll
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\MonoGame.Framework.dll
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\Newtonsoft.Json.dll
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.dll
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.XInput.dll
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\MonoGame.Framework.xml
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\Newtonsoft.Json.xml
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.xml
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.XInput.xml
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+L:\Bloodlust\Bloodlust2\obj\x86\Debug\Bloodlust2.csprojResolveAssemblyReference.cache
+L:\Bloodlust\Bloodlust2\bin\Windows\x86\Debug\Content\Tile16.xnb
+D:\AIE BACKUP\Bloodlust-4e9dc7848bc62e8859659937383adecd535a449b\Bloodlust2\obj\x86\Debug\Bloodlust2.exe
+D:\AIE BACKUP\Bloodlust-4e9dc7848bc62e8859659937383adecd535a449b\Bloodlust2\obj\x86\Debug\Bloodlust2.pdb

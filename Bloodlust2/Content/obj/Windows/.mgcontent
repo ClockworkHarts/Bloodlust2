@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>L:/Bloodlust/Bloodlust2/Content/Arial.spritefont</File>
+    <File>L:/Bloodlust/Bloodlust2/Content/debug.png</File>
+    <File>L:/Bloodlust/Bloodlust2/Content/maria.png</File>
+    <File>L:/Bloodlust/Bloodlust2/Content/Tile32.png</File>
+    <File>L:/Bloodlust/Bloodlust2/Content/Tile64.png</File>
+    <File>L:/Bloodlust/Bloodlust2/Content/Tile16.png</File>
+  </SourceFiles>
+</SourceFileCollection>
