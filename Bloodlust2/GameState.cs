@@ -78,14 +78,12 @@ namespace Bloodlust2
 
         }
 
-        private void LoadWeapon(WeaponType type, Vector2 Position, Vector2 Scale, float attackSpeed, float damage)
+        private void InitialiseWeapon(WeaponType type, Vector2 Position)
         {
             Weapon Weapon = new Weapon();
             Weapon.type = type;
+            Weapon.Initialise();
             Weapon.Position = Position;
-            Weapon.Scale = Scale;
-            Weapon.attackSpeed = attackSpeed;
-            Weapon.damage = damage;
             Weapons.Add(Weapon);
         }
 
@@ -114,9 +112,9 @@ namespace Bloodlust2
             }
 
             //weapons
-            LoadWeapon(WeaponType.Dagger, new Vector2(700, 700), daggerScale, daggerAttackSpeed, daggerDamage);
-            LoadWeapon(WeaponType.Spear, new Vector2(500, 500), spearScale, spearAttackSpeed, spearDamage);
-            LoadWeapon(WeaponType.Sword, new Vector2(1000, 1000), swordScale, swordAttackSpeed, swordDamage);
+            InitialiseWeapon(WeaponType.Dagger, new Vector2(700, 700));
+            InitialiseWeapon(WeaponType.Spear, new Vector2(500, 500));
+            InitialiseWeapon(WeaponType.Sword, new Vector2(1000, 1000));
 
             foreach (Weapon W in Weapons)
             {
@@ -193,9 +191,9 @@ namespace Bloodlust2
                 B.Update(deltaTime);
             }
 
-            foreach(Weapon W in Weapons)
+            foreach (Weapon W in Weapons)
             {
-                W.Update(deltaTime);
+                W.Update(deltaTime, Content);
             }
 
             UpdateCollisions(deltaTime);

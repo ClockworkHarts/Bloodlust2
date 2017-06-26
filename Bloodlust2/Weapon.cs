@@ -50,9 +50,38 @@ namespace Bloodlust2
 
         //General
         public WeaponType type;
+        public WeaponType oldType;
 
         //Textures
-        
+
+       public void Initialise()
+        {
+            switch (type)
+            {
+                case WeaponType.Unarmed:
+                    break;
+
+                case WeaponType.Dagger:
+                    Scale = GameState.current.daggerScale;
+                    attackSpeed = GameState.current.daggerAttackSpeed;
+                    damage = GameState.current.daggerDamage;
+                    break;
+
+                case WeaponType.Sword:
+                    Scale = GameState.current.swordScale;
+                    attackSpeed = GameState.current.swordAttackSpeed;
+                    damage = GameState.current.swordDamage;
+                    break;
+
+                case WeaponType.Spear:
+                    Scale = GameState.current.spearScale;
+                    attackSpeed = GameState.current.spearAttackSpeed;
+                    damage = GameState.current.spearDamage;
+                    break;
+
+
+            }
+        }
         public void Load(ContentManager Content)
         {
             AnimatedTexture animation = new AnimatedTexture(Vector2.Zero, 0f, Scale, 0f);
@@ -82,9 +111,14 @@ namespace Bloodlust2
 
         }
 
-        public void Update(float deltaTime)
+        public void Update(float deltaTime, ContentManager Content)
         {
-
+            if (type != oldType)
+            {
+                Initialise();
+                Load(Content);
+                oldType = type;
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)

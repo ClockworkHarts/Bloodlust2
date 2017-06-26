@@ -48,8 +48,8 @@ namespace Bloodlust2
         }
 
         //General
-        public WeaponType equipType = WeaponType.Dagger;
-        //public Weapon EquippedWeapon = new Weapon();
+        public WeaponType equipType = WeaponType.Unarmed;
+        public Weapon EquippedWeapon = new Weapon();
 
         
 
@@ -60,7 +60,12 @@ namespace Bloodlust2
             sprite.Add(animation, 0, 0);
             sprite.colour = Color.Red;
 
-            //EquippedWeapon.Load(Content);
+
+            //weapon loading
+            EquippedWeapon.type = WeaponType.Unarmed;
+            EquippedWeapon.oldType = WeaponType.Unarmed;
+            EquippedWeapon.Initialise();
+            EquippedWeapon.Load(Content);
         }
 
         
@@ -69,44 +74,22 @@ namespace Bloodlust2
         {
             UpdateInput(deltaTime);
             sprite.Update(deltaTime);
-            //UpdateEquippedWeapon(deltaTime, Content);
+            UpdateEquippedWeapon(deltaTime);
+            EquippedWeapon.Update(deltaTime, Content);
         }
 
-        //private void UpdateEquippedWeapon(float deltaTime, ContentManager Content)
-        //{
-        //    EquippedWeapon.type = equipType;
+        private void UpdateEquippedWeapon(float deltaTime)
+        {
+            if(EquippedWeapon.type != equipType)
+            {
+                EquippedWeapon.type = equipType;
+            }
 
-        //    switch (EquippedWeapon.type)
-        //    {
-        //        case WeaponType.Unarmed:
-        //            //hmmm add this in bois idk what tho
-        //            break;
+            EquippedWeapon.Position = this.Position + (new Vector2(32, 32) * this.direction);
 
-        //        case WeaponType.Dagger:
-        //            EquippedWeapon.Scale = GameState.current.daggerScale;
-        //            EquippedWeapon.attackSpeed = GameState.current.daggerAttackSpeed;
-        //            EquippedWeapon.damage = GameState.current.daggerDamage;
-        //            break;
+        }
 
-        //        case WeaponType.Sword:
-        //            EquippedWeapon.Load(Content);
-        //            EquippedWeapon.Scale = GameState.current.swordScale;
-        //            EquippedWeapon.attackSpeed = GameState.current.swordAttackSpeed;
-        //            EquippedWeapon.damage = GameState.current.swordDamage;
-        //            break;
-
-        //        case WeaponType.Spear:
-        //            EquippedWeapon.Load(Content);
-        //            EquippedWeapon.Scale = GameState.current.spearScale;
-        //            EquippedWeapon.attackSpeed = GameState.current.spearAttackSpeed;
-        //            EquippedWeapon.damage = GameState.current.spearDamage;
-        //            break;
-        //    }
-
-        //    EquippedWeapon.Position = this.Position + (new Vector2(32, 32) * this.direction);
-        //}
-
-        
+  
         private void UpdateCombat(float deltaTime)
         {
             if (Keyboard.GetState().IsKeyDown(Keys.Enter) == true && isPressed == false)
@@ -207,10 +190,10 @@ namespace Bloodlust2
         {
             sprite.Draw(spriteBatch);
 
-            //if (EquippedWeapon.type != WeaponType.Unarmed)
-            //{
-            //    EquippedWeapon.Draw(spriteBatch);
-            //}
+            if (EquippedWeapon.type != WeaponType.Unarmed)
+            {
+                EquippedWeapon.Draw(spriteBatch);
+            }
 
         }
     
