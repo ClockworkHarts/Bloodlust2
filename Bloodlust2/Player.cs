@@ -33,6 +33,7 @@ namespace Bloodlust2
         //Floats
         public float health;
         public float maxHealth;
+        public float weaponRotation;
         public float Radius()
         {
             float radius = Math.Min(Bounds.Height, Bounds.Width);

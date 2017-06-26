@@ -41,7 +41,7 @@ namespace Bloodlust2
         //Weapons
         List<Weapon> Weapons = new List<Weapon>();
                 //Dagger
-                public Vector2 daggerScale = new Vector2(0.5f, 1);
+                public Vector2 daggerScale = new Vector2(5f, 1f);
                 public float daggerAttackSpeed = 5f;
                 public float daggerDamage = 15f; 
 

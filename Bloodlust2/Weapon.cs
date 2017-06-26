@@ -49,6 +49,8 @@ namespace Bloodlust2
         public WeaponType oldType;
 
         //Textures
+        
+
 
        public void Initialise()
         {
@@ -80,7 +82,7 @@ namespace Bloodlust2
         }
         public void Load(ContentManager Content)
         {
-            AnimatedTexture animation = new AnimatedTexture(Vector2.Zero, 0f, Scale, 0f);
+            AnimatedTexture animation = new AnimatedTexture(origin, 0f, Scale, 0f);
             switch (type)
             {
                 case WeaponType.Dagger:

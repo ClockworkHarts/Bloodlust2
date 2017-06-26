@@ -168,3 +168,4 @@ L:\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.XInput.xml
 L:\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.RawInput.xml
 L:\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
 L:\Bloodlust2\Bloodlust2\obj\x86\Debug\Bloodlust2.csprojResolveAssemblyReference.cache
+L:\Bloodlust2\Bloodlust2\bin\Windows\x86\Debug\Content\marker.xnb
