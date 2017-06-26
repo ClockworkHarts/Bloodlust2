@@ -19,17 +19,13 @@ namespace Bloodlust2
         Sprite sprite = new Sprite();
 
         //Vectors
+        public Vector2 origin = new Vector2(8,8);
         public Vector2 Position
         {
             get { return sprite.position; }
             set { sprite.position = value; }
         }
 
-
-        //once a good size for the different weapon types is determined
-        //this set function needs to be changed to a switch function
-        //that loads a scale based on the weapon's type
-        //as all of them will be the same 
         public Vector2 Scale
         {
             get { return sprite.scale; }
@@ -56,6 +52,8 @@ namespace Bloodlust2
 
        public void Initialise()
         {
+            //sprite = new Sprite();
+
             switch (type)
             {
                 case WeaponType.Unarmed:
@@ -78,8 +76,6 @@ namespace Bloodlust2
                     attackSpeed = GameState.current.spearAttackSpeed;
                     damage = GameState.current.spearDamage;
                     break;
-
-
             }
         }
         public void Load(ContentManager Content)
@@ -107,6 +103,7 @@ namespace Bloodlust2
                     sprite.colour = Color.Transparent;
                     break;
             }
+            sprite.Clear();
             sprite.Add(animation, 0, 0);
 
         }

@@ -21,6 +21,8 @@ namespace Bloodlust2
         //Vectors
         public Vector2 velocity = Vector2.Zero;
         public Vector2 direction = Vector2.Zero;
+        public Vector2 origin = new Vector2(16, 16);
+        public Vector2 weaponDirection = Vector2.Zero;
         public Vector2 scale = new Vector2(1, 1);
         public Vector2 Position
         {
@@ -55,12 +57,14 @@ namespace Bloodlust2
 
         public void Load(ContentManager Content)
         {
-            AnimatedTexture animation = new AnimatedTexture(Vector2.Zero, 0, scale, 1);
+            AnimatedTexture animation = new AnimatedTexture(origin, 0, scale, 1);
             animation.Load(Content, "tile32", 1, 1);
             sprite.Add(animation, 0, 0);
             sprite.colour = Color.Red;
 
 
+
+       
             //weapon loading
             EquippedWeapon.type = WeaponType.Unarmed;
             EquippedWeapon.oldType = WeaponType.Unarmed;
@@ -86,6 +90,7 @@ namespace Bloodlust2
             }
 
             EquippedWeapon.Position = this.Position + (new Vector2(32, 32) * this.direction);
+
 
         }
 
@@ -119,6 +124,7 @@ namespace Bloodlust2
                 acceleration.Y = -GameState.acceleration;
                 //add in some code to animated texture and sprite to allow for vertical flipping
                 direction.Y = -1;
+                weaponDirection.Y = 0;
 
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.S) == true)

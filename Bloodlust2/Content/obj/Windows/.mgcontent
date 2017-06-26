@@ -4,10 +4,10 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/AIE BACKUP/Bloodlust/Bloodlust2/Content/Arial.spritefont</File>
-    <File>D:/AIE BACKUP/Bloodlust/Bloodlust2/Content/debug.png</File>
-    <File>D:/AIE BACKUP/Bloodlust/Bloodlust2/Content/Tile32.png</File>
-    <File>D:/AIE BACKUP/Bloodlust/Bloodlust2/Content/Tile64.png</File>
-    <File>D:/AIE BACKUP/Bloodlust/Bloodlust2/Content/Tile16.png</File>
+    <File>L:/Bloodlust2/Bloodlust2/Content/Arial.spritefont</File>
+    <File>L:/Bloodlust2/Bloodlust2/Content/debug.png</File>
+    <File>L:/Bloodlust2/Bloodlust2/Content/Tile32.png</File>
+    <File>L:/Bloodlust2/Bloodlust2/Content/Tile64.png</File>
+    <File>L:/Bloodlust2/Bloodlust2/Content/Tile16.png</File>
   </SourceFiles>
 </SourceFileCollection>

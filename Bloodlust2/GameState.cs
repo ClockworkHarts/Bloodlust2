@@ -112,13 +112,14 @@ namespace Bloodlust2
             }
 
             //weapons
-            InitialiseWeapon(WeaponType.Dagger, new Vector2(700, 700));
-            InitialiseWeapon(WeaponType.Spear, new Vector2(500, 500));
+            InitialiseWeapon(WeaponType.Dagger, new Vector2(500, 500));
+            InitialiseWeapon(WeaponType.Spear, new Vector2(700, 700));
             InitialiseWeapon(WeaponType.Sword, new Vector2(1000, 1000));
 
             foreach (Weapon W in Weapons)
             {
                 W.Load(Content);
+                
             }
 
             //map
@@ -244,6 +245,7 @@ namespace Bloodlust2
 
             //debugging
             spriteBatch.DrawString(font, player.equipType.ToString(), new Vector2(10, 10), Color.Black);
+            
                     
             spriteBatch.End();
         }

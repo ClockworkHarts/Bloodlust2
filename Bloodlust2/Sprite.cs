@@ -44,6 +44,12 @@ namespace Bloodlust2
             animationOffsets.Add(new Vector2(xOffset, yOffset));
         }
 
+        public void Clear()
+        {
+            animations.Clear();
+            animationOffsets.Clear();
+        }
+
         public void Update(float deltaTime)
         {
             animations[currentAnimation].UpdateFrame(deltaTime);
