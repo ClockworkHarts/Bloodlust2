@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/AIE BACKUP/Bloodlust/Bloodlust2/Content/marker.png</SourceFile>
-  <SourceTime>2017-06-28T17:44:53.1140699+09:30</SourceTime>
-  <DestFile>D:/AIE BACKUP/Bloodlust/Bloodlust2/Content/bin/Windows/marker.xnb</DestFile>
-  <DestTime>2017-06-28T17:51:18.8915256+09:30</DestTime>
+  <SourceFile>L:/Bloodlust2/Bloodlust2/Content/marker.png</SourceFile>
+  <SourceTime>2017-06-26T19:52:04.8200268+09:30</SourceTime>
+  <DestFile>L:/Bloodlust2/Bloodlust2/Content/bin/Windows/marker.xnb</DestFile>
+  <DestTime>2017-07-03T17:28:33.7086702+09:30</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2016-03-30T17:06:08+10:30</ImporterTime>
+  <ImporterTime>2016-03-22T08:22:00+10:30</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2016-03-30T17:06:08+10:30</ProcessorTime>
+  <ProcessorTime>2016-03-22T08:22:00+10:30</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

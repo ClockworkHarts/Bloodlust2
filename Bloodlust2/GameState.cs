@@ -42,17 +42,17 @@ namespace Bloodlust2
         List<Weapon> Weapons = new List<Weapon>();
                 //Dagger
                 public Vector2 daggerScale = new Vector2(0.8f, 1f);
-                public float daggerAttackSpeed = 5f;
+                public float daggerAttackSpeed = 0.2f;
                 public float daggerDamage = 15f; 
 
                 //Sword
                 public Vector2 swordScale = new Vector2(1.1f, 1.5f);
-                public float swordAttackSpeed = 13f;
+                public float swordAttackSpeed = 0.5f;
                 public float swordDamage = 30f;
 
                 //Spear
                 public Vector2 spearScale = new Vector2(1f, 2.5f);
-                public float spearAttackSpeed = 20f;
+                public float spearAttackSpeed = 0.7f;
                 public float spearDamage = 50f;
        
         //public gamewide variables
@@ -171,6 +171,7 @@ namespace Bloodlust2
             {
                 foreach (Enemy NPC in B.NPCs)
                 {
+
                     if (IsCollidingRectangle(NPC.Bounds, player.EquippedWeapon.Bounds) == true)
                     {
                         NPC.health -= player.EquippedWeapon.damage;

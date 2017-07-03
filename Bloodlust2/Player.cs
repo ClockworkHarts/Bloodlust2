@@ -136,16 +136,23 @@ namespace Bloodlust2
                 isAttackPressed = false;
             }
 
-            if (isAttacking == true)
-            {
-                UpdateCombatCollisions();
-                UpdateAttackTimer(deltaTime);
-            }
-
             if (attackTimer == 0f)
             {
                 isAttacking = false;
             }
+
+            if (isAttacking == true)
+            {
+                UpdateAttackTimer(deltaTime);
+            }
+
+            if (isAttackPressed == true)
+            {
+                UpdateCombatCollisions();
+                isAttackPressed = false;
+            }
+
+            
 
             if (attackTimer < 0f)
             {
