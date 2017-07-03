@@ -25,7 +25,7 @@ namespace Bloodlust2
         Random random = new Random();
 
         //Textures
-        Texture2D generic16;
+        public Texture2D generic16;
 
         //Map
         public Map map = new Map();
@@ -41,7 +41,7 @@ namespace Bloodlust2
         //Weapons
         List<Weapon> Weapons = new List<Weapon>();
                 //Dagger
-                public Vector2 daggerScale = new Vector2(5f, 1f);
+                public Vector2 daggerScale = new Vector2(0.8f, 1f);
                 public float daggerAttackSpeed = 5f;
                 public float daggerDamage = 15f; 
 
@@ -165,6 +165,21 @@ namespace Bloodlust2
             }
         }
 
+        public void UpdatePlayerNPCCombat()
+        {
+            foreach (NPC B in Batches)
+            {
+                foreach (Enemy NPC in B.NPCs)
+                {
+                    if (IsCollidingRectangle(NPC.Bounds, player.EquippedWeapon.Bounds) == true)
+                    {
+                        NPC.health -= player.EquippedWeapon.damage;
+                    }
+                    
+                }
+            }
+        }
+
 
 
         private void UpdateCollisions(float deltaTime)
@@ -245,8 +260,11 @@ namespace Bloodlust2
 
             //debugging
             spriteBatch.DrawString(font, player.equipType.ToString(), new Vector2(10, 10), Color.Black);
-            
-                    
+            spriteBatch.DrawString(font, player.isAttacking.ToString(), new Vector2(10, 50), Color.Black);
+            spriteBatch.DrawString(font, player.isAttackPressed.ToString(), new Vector2(10, 90), Color.Black);
+            spriteBatch.DrawString(font, player.attackTimer.ToString(), new Vector2(10, 130), Color.Black);
+
+
             spriteBatch.End();
         }
 

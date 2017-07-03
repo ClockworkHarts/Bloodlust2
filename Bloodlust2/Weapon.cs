@@ -16,7 +16,7 @@ namespace Bloodlust2
         //NOTE to set the size of the weapons bounds, sprite.scale needs to be used
 
 
-        Sprite sprite = new Sprite();
+        public Sprite sprite = new Sprite();
 
         //Vectors
         public Vector2 origin = new Vector2(8,8);
@@ -37,6 +37,7 @@ namespace Bloodlust2
         //Floats
         public float attackSpeed;
         public float damage;
+        public float rotation = 0f;
 
         //Rectangles
         public Rectangle Bounds
@@ -54,8 +55,7 @@ namespace Bloodlust2
 
        public void Initialise()
         {
-            //sprite = new Sprite();
-
+            
             switch (type)
             {
                 case WeaponType.Unarmed:
@@ -82,7 +82,7 @@ namespace Bloodlust2
         }
         public void Load(ContentManager Content)
         {
-            AnimatedTexture animation = new AnimatedTexture(origin, 0f, Scale, 0f);
+            AnimatedTexture animation = new AnimatedTexture(origin, rotation, Scale, 0f);
             switch (type)
             {
                 case WeaponType.Dagger:

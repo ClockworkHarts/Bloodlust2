@@ -8,8 +8,15 @@ using Microsoft.Xna.Framework;
 
 namespace Bloodlust2
 {
-    class HitBox
+    public class HitBox
     {
+        public Rectangle hitBox = new Rectangle();
+        public Vector2 position = Vector2.Zero;
+        public float timer = 0f;
+
+        
+
+        
 
     }
 }

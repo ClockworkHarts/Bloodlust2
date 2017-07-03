@@ -22,6 +22,7 @@ namespace Bloodlust2
         public Vector2 velocity = Vector2.Zero;
         public Vector2 scale = new Vector2(1, 1);
         public Vector2 targetPosition = Vector2.Zero;
+        public Vector2 origin = Vector2.Zero;
         public Vector2 Position
         {
             get { return sprite.position; }
@@ -33,6 +34,8 @@ namespace Bloodlust2
         public float combatRadius = 0f;
         public float detectionRadius = 0f;
         public float idleTimer = 0f;
+        public float health;
+        public float maxHealth;
         public float CombatRadius()
         {
             float enemyRadius = Math.Min(Bounds.Height, Bounds.Width);

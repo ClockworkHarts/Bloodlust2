@@ -18,6 +18,8 @@ namespace Bloodlust2
         public Color colour;
         Random random = new Random();
         Rectangle NPCLocation = new Rectangle();
+        public Vector2 origin = new Vector2(16, 16);
+        
         
         
 
@@ -49,7 +51,10 @@ namespace Bloodlust2
             enemy.Position = NPCPosition();
             enemy.sprite.colour = colour;
             enemy.speed = random.Next(30, 80);
+            enemy.health = random.Next(80, 100);
+            enemy.maxHealth = enemy.health;
             enemy.state = EnemyState.Idle;
+            enemy.origin = origin;
             NPCs.Add(enemy);
         }
       
@@ -149,6 +154,9 @@ namespace Bloodlust2
             foreach (Enemy NPC in NPCs)
             {
                 NPC.Draw(spriteBatch);
+
+                spriteBatch.Draw(GameState.current.generic16, (NPC.Position + new Vector2(-57, -25)), null, null, null, 0f, new Vector2(NPC.maxHealth * 0.1f, 0.1f), Color.Black, SpriteEffects.None, 0f);
+                spriteBatch.Draw(GameState.current.generic16, (NPC.Position + new Vector2(-57, -25)), null, null, null, 0f, new Vector2(NPC.health * 0.1f, 0.1f), Color.Red, SpriteEffects.None, 0f);
             }
         }
     }

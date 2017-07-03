@@ -21,8 +21,9 @@ namespace Bloodlust2
         //Vectors
         public Vector2 velocity = Vector2.Zero;
         public Vector2 direction = Vector2.Zero;
-        public Vector2 origin = new Vector2(16, 16);
         public Vector2 weaponDirection = Vector2.Zero;
+        public Vector2 weaponAxis = Vector2.Zero;
+        public Vector2 origin = new Vector2(16, 16);
         public Vector2 scale = new Vector2(1, 1);
         public Vector2 Position
         {
@@ -33,7 +34,8 @@ namespace Bloodlust2
         //Floats
         public float health;
         public float maxHealth;
-        public float weaponRotation;
+        public float weaponRotation = 0f;
+        public float attackTimer = 0f;
         public float Radius()
         {
             float radius = Math.Min(Bounds.Height, Bounds.Width);
@@ -42,6 +44,7 @@ namespace Bloodlust2
 
         //Bools
         public bool isAttacking = false;
+        public bool isAttackPressed = false;
 
 
         //Rectangles
@@ -70,6 +73,7 @@ namespace Bloodlust2
             EquippedWeapon.type = WeaponType.Unarmed;
             EquippedWeapon.oldType = WeaponType.Unarmed;
             EquippedWeapon.Initialise();
+            EquippedWeapon.rotation = 0f;
             EquippedWeapon.Load(Content);
         }
 
@@ -79,23 +83,35 @@ namespace Bloodlust2
         {
             UpdateInput(deltaTime);
             sprite.Update(deltaTime);
-            UpdateEquippedWeapon(deltaTime);
+            UpdateEquippedWeapon(deltaTime, Content);
             EquippedWeapon.Update(deltaTime, Content);
         }
 
-        private void UpdateEquippedWeapon(float deltaTime)
+        private void UpdateEquippedWeapon(float deltaTime, ContentManager Content)
         {
             if(EquippedWeapon.type != equipType)
             {
                 EquippedWeapon.type = equipType;
             }
 
-            EquippedWeapon.Position = this.Position + (new Vector2(32, 32) * this.direction);
-
+            EquippedWeapon.rotation = weaponRotation;
+            EquippedWeapon.sprite.Clear();
+            EquippedWeapon.Load(Content);
+            EquippedWeapon.Position = this.Position + (this.weaponAxis * this.weaponDirection);
 
         }
 
-  
+
+        private void UpdateAttackTimer(float deltaTime)
+        {
+            attackTimer -= deltaTime;
+        }
+
+        private void UpdateCombatCollisions()
+        {  
+                GameState.current.UpdatePlayerNPCCombat();
+        }
+
         private void UpdateCombat(float deltaTime)
         {
             if (Keyboard.GetState().IsKeyDown(Keys.Enter) == true && isPressed == false)
@@ -103,12 +119,41 @@ namespace Bloodlust2
                 isPressed = true;
                 health -= 10;
             }
-            if (Keyboard.GetState().IsKeyUp(Keys.Enter) == true)
+            else if (Keyboard.GetState().IsKeyUp(Keys.Enter) == true)
             {
                 isPressed = false;
             }
 
-            
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) == true && isAttacking == false && isAttackPressed == false)
+            {
+                isAttacking = true;
+                isAttackPressed = true;
+                attackTimer = EquippedWeapon.attackSpeed;
+            }
+
+            if (Keyboard.GetState().IsKeyUp(Keys.Space) == true)
+            {
+                isAttackPressed = false;
+            }
+
+            if (isAttacking == true)
+            {
+                UpdateCombatCollisions();
+                UpdateAttackTimer(deltaTime);
+            }
+
+            if (attackTimer == 0f)
+            {
+                isAttacking = false;
+            }
+
+            if (attackTimer < 0f)
+            {
+                attackTimer = 0f;
+            }
+
+
+
         }
 
         private void UpdateMotion(float deltaTime)
@@ -125,7 +170,9 @@ namespace Bloodlust2
                 acceleration.Y = -GameState.acceleration;
                 //add in some code to animated texture and sprite to allow for vertical flipping
                 direction.Y = -1;
-                weaponDirection.Y = 0;
+                weaponDirection.Y = -1;
+                weaponRotation = 0f;
+                weaponAxis = new Vector2(1, 32);             
 
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.S) == true)
@@ -133,6 +180,9 @@ namespace Bloodlust2
                 acceleration.Y = GameState.acceleration;
                 // add in some code for vertical flipping
                 direction.Y = 1;
+                weaponDirection.Y = 1;
+                weaponRotation = 0f;
+                weaponAxis = new Vector2(1, 32);
             }
             else if (wasMovingUp == true)
             {
@@ -151,12 +201,18 @@ namespace Bloodlust2
                 acceleration.X = -GameState.acceleration;
                 sprite.SetFlipped(true);
                 direction.X = -1;
+                weaponDirection.X = -1;
+                weaponRotation = 1.5708f;
+                weaponAxis = new Vector2(32, 1);
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.D) == true)
             {
                 acceleration.X = GameState.acceleration;
                 sprite.SetFlipped(false);
                 direction.X = 1;
+                weaponDirection.X = 1;
+                weaponRotation = 1.5708f;
+                weaponAxis = new Vector2(32, 1);
             }
             else if (wasMovingLeft == true)
             {
@@ -201,6 +257,8 @@ namespace Bloodlust2
             {
                 EquippedWeapon.Draw(spriteBatch);
             }
+
+            
 
         }
     
